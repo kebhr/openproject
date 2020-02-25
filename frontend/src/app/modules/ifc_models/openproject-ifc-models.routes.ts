@@ -57,6 +57,9 @@ export const IFC_ROUTES:Ng2StateDeclaration[] = [
     name: 'bim.space.list',
     url: '/list',
     component: IFCViewerPageComponent,
+    data: {
+      viewRoute: 'bim.space.defaults',
+    },
     views: {
       list: { component: BCFListContainerComponent }
     }
@@ -65,6 +68,9 @@ export const IFC_ROUTES:Ng2StateDeclaration[] = [
     name: 'bim.space.defaults',
     url: '/defaults',
     component: IFCViewerPageComponent,
+    data: {
+      viewRoute: 'bim.space.defaults',
+    },
     views: {
       viewer: { component: IFCViewerComponent },
       list: { component: BCFListContainerComponent }
@@ -74,6 +80,9 @@ export const IFC_ROUTES:Ng2StateDeclaration[] = [
     name: 'bim.space.defaults.model',
     url: '/model',
     component: IFCViewerPageComponent,
+    data: {
+      viewRoute: 'bim.space.defaults',
+    },
     views: {
       // Retarget and by that override the grandparent views
       // https://ui-router.github.io/guide/views#relative-parent-state
@@ -152,6 +161,9 @@ export const IFC_ROUTES:Ng2StateDeclaration[] = [
     name: 'bim.space.show',
     url: '/{model_id:[0-9]+}',
     component: IFCViewerPageComponent,
+    data: {
+      viewRoute: 'bim.space.show',
+    },
     views: {
       viewer: { component: IFCViewerComponent },
       list: { component: BCFListContainerComponent }
@@ -161,6 +173,9 @@ export const IFC_ROUTES:Ng2StateDeclaration[] = [
     name: 'bim.space.show.model',
     url: '/model',
     component: IFCViewerPageComponent,
+    data: {
+      viewRoute: 'bim.space.show',
+    },
     views: {
       // Retarget and by that override the grandparent views
       // https://ui-router.github.io/guide/views#relative-parent-state
